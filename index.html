@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Flaum</title>
+  <meta name="description" content="Ruhiges Tagebuch für Schwangerschaft und Babyzeit. Kein Konto, kein Abo, alles bleibt auf dem Gerät.">
+  <meta name="theme-color" content="#FEF8F3" id="theme-color">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Flaum">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="preload" href="assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <div id="app">
+    <div id="aura" class="aura" data-aura="rest" aria-hidden="true"></div>
+    <main id="root"></main>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </div>
+  <noscript>Flaum braucht JavaScript. Bitte schalte es in deinem Browser ein.</noscript>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

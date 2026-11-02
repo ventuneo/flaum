@@ -1,0 +1,22 @@
+{
+  "name": "Flaum",
+  "short_name": "Flaum",
+  "description": "Ruhiges Tagebuch für Schwangerschaft und Babyzeit.",
+  "lang": "de-CH",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#FBF2EA",
+  "theme_color": "#FEF8F3",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Schlaf", "url": "./index.html#/log/sleep" },
+    { "name": "Stillen", "url": "./index.html#/log/nursing" },
+    { "name": "Flasche", "url": "./index.html#/log/bottle" },
+    { "name": "Wehen", "url": "./index.html#/wehen" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "flaum",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A calm pregnancy and baby log. No account, no subscription, everything stays on the device.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "TZ=Europe/Zurich node --test test/*.test.js",
+    "e2e": "TZ=Europe/Zurich node --test --test-concurrency=1 e2e/*.test.mjs"
+  },
+  "devDependencies": {
+    "@fontsource-variable/dm-sans": "5.2.8",
+    "playwright": "1.56.1"
+  }
+}
