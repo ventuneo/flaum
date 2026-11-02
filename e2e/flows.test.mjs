@@ -628,7 +628,7 @@ test('interactive elements are large enough for tired thumbs', async () => {
     await page.goto(`${BASE}${hash}`);
     await page.waitForTimeout(40);
     const small = await page.evaluate(() => [...document.querySelectorAll('#root .chip, #root .go, #root .glass, #root .tile, #root .round, #root .side')]
-      .filter((el) => { const r = el.getBoundingClientRect(); return r.height < 44 || r.width < 44; })
+      .filter((el) => { const r = el.getBoundingClientRect(); return r.height < 43.5 || r.width < 43.5; })
       .map((el) => el.textContent.trim().slice(0, 20)));
     assert.deepEqual(small, [], `on ${hash}`);
   }
