@@ -55,7 +55,7 @@ export const plan = {
       <section class="screen screen--page moment">
         ${miniHeader('Tagesplan')}
         <div class="stage stage--low">
-          <h1 class="word word--medium">${esc(head.word)}</h1>
+          <p class="word word--medium">${esc(head.word)}</p>
           <p class="sub">${esc(head.sub)}</p>
         </div>
         <div class="sheet sheet--fill">

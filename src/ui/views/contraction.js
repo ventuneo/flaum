@@ -55,7 +55,7 @@ export const contraction = {
           </button>
           ${timer ? '<p class="sub breath-cue">Atme mit dem Kreis, langsam ein und aus.</p>' : ''}
         </div>
-        <div class="sheet">
+        <div class="sheet sheet--fill">
           ${s.callHint ? `
             <div class="callout" role="status">
               <p>Deine Wehen kommen regelmässig, etwa alle ${esc(dur(s.avgInterval))}. Ruf jetzt dein Spital oder deine Hebamme an.</p>
