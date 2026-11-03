@@ -66,8 +66,8 @@ export const contraction = {
             ${chips(INTENSITIES, { act: 'intensity', selected: lastEntry.data.intensity })}` : ''}
 
           <dl class="facts">
-            <div><dt>Abstand</dt><dd>${s.avgInterval ? esc(dur(s.avgInterval)) : '–'}</dd></div>
-            <div><dt>Dauer</dt><dd>${s.avgDuration ? esc(durSeconds(s.avgDuration)) : '–'}</dd></div>
+            <div><dt><span aria-hidden="true">Ø </span><span class="sr-only">Durchschnittlicher </span>Abstand</dt><dd>${s.avgInterval ? esc(dur(s.avgInterval)) : '–'}</dd></div>
+            <div><dt><span aria-hidden="true">Ø </span><span class="sr-only">Durchschnittliche </span>Dauer</dt><dd>${s.avgDuration ? esc(durSeconds(s.avgDuration)) : '–'}</dd></div>
             <div><dt>Letzte Stunde</dt><dd>${s.count}</dd></div>
           </dl>
 
