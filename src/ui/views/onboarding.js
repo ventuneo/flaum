@@ -111,7 +111,7 @@ export const onboarding = {
         <div class="sheet">
           ${step.body}
           ${d.error ? `<p class="error" role="alert">${esc(d.error)}</p>` : ''}
-          <div class="sheet-end">${go(d.step === total - 1 ? 'Fertig' : 'Weiter', { act: 'next', icon: d.step === total - 1 ? icon.check : icon.arrow })}</div>
+          <div class="sheet-end">${go(d.step === total - 1 ? 'Fertig' : 'Weiter', { act: 'next' })}</div>
           ${step.extra ?? ''}
         </div>
       </section>`;

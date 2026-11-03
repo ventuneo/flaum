@@ -36,10 +36,12 @@ export const chips = (items, { act, selected, multi = false, layout = '' }) =>
     }))
     .join('')}</div>`;
 
-export const go = (text, { act, icon: glyph = icon.check, href = null, extra = '' } = {}) =>
+// The primary action is a plain filled button with its label in the middle.
+// A knob at one end made it look like a slider that has to be dragged.
+export const go = (text, { act, href = null, extra = '' } = {}) =>
   (href
-    ? `<a class="go" href="${esc(href)}" ${extra}><span>${esc(text)}</span><i>${glyph}</i></a>`
-    : `<button type="button" class="go" data-act="${esc(act)}" ${extra}><span>${esc(text)}</span><i>${glyph}</i></button>`);
+    ? `<a class="go" href="${esc(href)}" ${extra}>${esc(text)}</a>`
+    : `<button type="button" class="go" data-act="${esc(act)}" ${extra}>${esc(text)}</button>`);
 
 export const pillNav = (current) => `
   <div class="navdock">

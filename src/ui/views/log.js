@@ -135,7 +135,7 @@ const FORMS = {
         word: 'Schlaf',
         sub: `Tippe, sobald ${ctx.child.name} eingeschlafen ist.`,
         body: '<button type="button" class="link" data-act="sleep-manual">Schon vorbei? Zeiten eintragen</button>',
-        primary: go('Schlaf starten', { act: 'sleep-start', icon: icon.play }),
+        primary: go('Schlaf starten', { act: 'sleep-start' }),
       };
     },
     build: () => ({

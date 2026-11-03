@@ -53,6 +53,9 @@
   --c-bottle-3: light-dark(#cfdcf3, #2d4470);
 
   --press: light-dark(rgb(120 80 60 / .08), rgb(255 235 220 / .09));
+  /* The one filled button per screen: the strongest pair on the page, readable in both themes. */
+  --action: var(--ink);
+  --on-action: var(--sheet);
 
   --r-sheet: 44px;
   --r-chip: 17px;
@@ -327,32 +330,23 @@ a.row:active { background-color: var(--press); }
 .chips--small .chip { min-height: 44px; padding: 0 14px; font-size: 15px; border-radius: 15px; }
 
 /* ---------- primary action ---------- */
+/* A filled pill with the label in the middle reads as "tap", not as a slider to drag. */
 .go {
   display: inline-flex;
   align-items: center;
-  gap: 18px;
-  min-height: 72px;
-  padding: 6px 6px 6px 28px;
+  justify-content: center;
+  min-width: min(100%, 240px);
+  min-height: 60px;
+  padding: 0 32px;
   border-radius: 99px;
-  background: var(--sheet-raised);
-  border: 1px solid var(--glass-line);
-  box-shadow: 0 12px 26px -18px var(--shadow);
-  color: var(--ink);
+  background: var(--action);
+  color: var(--on-action);
+  box-shadow: 0 12px 26px -16px var(--shadow);
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
+  transition: transform .12s ease-out;
 }
-.go i {
-  width: 60px;
-  height: 60px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--on);
-  color: var(--on-ink);
-  box-shadow: 0 6px 14px -8px var(--shadow);
-  font-style: normal;
-}
-.go:active i { transform: scale(.96); }
+.go:active { transform: scale(.97); }
 
 .link { align-self: center; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 12px; color: var(--ink-2); font-size: 15px; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line); }
 
@@ -642,8 +636,7 @@ a.row:active { background-color: var(--press); }
   .word--big { font-size: 56px; }
   .word--clock { font-size: 50px; }
   .sheet { gap: 12px; padding-top: 20px; }
-  .go { min-height: 62px; }
-  .go i { width: 50px; height: 50px; }
+  .go { min-height: 54px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
